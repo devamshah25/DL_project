@@ -7,13 +7,23 @@ This project explores the capabilities of modern Vision Transformer models for t
 1.  **Image Classification**: A DeiT-Tiny model (`deit-tiny-patch16-224`) was fine-tuned to classify images.
 2.  **Image Retrieval**: A pre-trained CLIP model (`clip-vit-base-patch32`) was used to perform zero-shot, text-based image retrieval.
 
-This repository contains the Jupyter notebook `deit_tiny_DLproject-2.ipynb`, which details the entire pipeline from data loading to analysis.
+This repository contains the Jupyter notebook and all the necessary metadata files to reproduce the experiment.
+
+## Repository Structure
+
+This project is organized as follows:
+
+*   `deit_tiny_DLproject-2.ipynb`: The main Jupyter Notebook containing all the code for data loading, training, evaluation, and analysis.
+*   `labels_fixed.csv`: The core metadata file, mapping each image file to its corresponding class label.
+*   `classes.txt`: A simple text file listing the 10 class names used in this experiment.
+*   `attributes.yaml`: A file containing metadata about the attributes of the objects in the dataset.
+*   `README.md`: This file, explaining the project.
 
 ## Models & Dataset
 
 *   **Classification Model**: `facebook/deit-tiny-patch16-224`
 *   **Retrieval Model**: `openai/clip-vit-base-patch32`
-*   **Dataset**: A custom dataset of **10 classes** of everyday objects, including `tableware_water_bottle`, `stationary_pen`, `clothing_wrist_watch`, etc. The dataset was split into training and validation sets using a stratified split to ensure representative class distribution.
+*   **Dataset**: A custom dataset of **10 classes** of everyday objects. The metadata is provided in this repository, but the image files themselves must be acquired separately.
 
 ## Key Features & Pipeline
 
@@ -24,21 +34,13 @@ This repository contains the Jupyter notebook `deit_tiny_DLproject-2.ipynb`, whi
 
 ## Classification Results & Observations
 
-The DeiT-Tiny model was fine-tuned for [Number] epochs on the 10-class dataset, achieving the following performance on the validation set:
+The DeiT-Tiny model was fine-tuned for 12 epochs on the 10-class dataset, achieving the following performance on the validation set:
 
-*   **Overall Accuracy**: `[Your Overall Accuracy for the 10-class model]`
-*   **Weighted F1-Score**: `[Your F1-Score for the 10-class model]`
+*   **Overall Accuracy**: `83%`
+*   **Weighted F1-Score**: `0.8257`
 
 #### Key Observations:
 *   **Performance**: The model achieved high performance, demonstrating its ability to learn effectively on a focused dataset.
-*   **Areas of Confusion**: The 10x10 confusion matrix showed minor confusion between `[Class A]` and `[Class B]`. This is likely because `[Your Reason, e.g., both classes share similar colors or shapes in the dataset]`.
+*   **Areas of Confusion**: The 10x10 confusion matrix showed minor confusion between `clothing_wrist_watch` and `electronics_accessories_phone_charger`. This is likely because `both classes have similar shape as in a central block connected to a long flexible line`.
 *   **Feature Space**: The t-SNE plot for the 10-class dataset showed very distinct, well-separated clusters, indicating that the model could easily distinguish between these specific objects.
-
-## How to Run
-
-1.  Clone this repository.
-2.  Install the required libraries (see `requirements.txt`).
-3.  Open `deit_tiny_DLproject-2.ipynb` in a Jupyter environment like Google Colab.
-4.  Make sure the file paths at the beginning of the notebook point to the correct location of your dataset in your Google Drive.
-5.  Run the cells sequentially from top to bottom.
 
