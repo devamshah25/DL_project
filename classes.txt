@@ -1,0 +1,10 @@
+tableware_water_bottle
+stationary_pen
+stationary_notebook
+electronic_accessories_phone_charger
+electronic_accessories_earphones
+personal_care_toothbrush
+personal_care_soap_bar
+personal_care_shampoo_bottle
+clothing_wrist_watch
+footware_slippers

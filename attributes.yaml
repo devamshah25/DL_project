@@ -1,0 +1,35 @@
+---
+
+colour:
+- red
+- blue
+- green
+- yellow
+- pink
+- purple
+- brown
+- black
+- white
+- silver
+- transparent
+- unknown
+
+material:
+- metal
+- plastic
+- rubber
+- paperback
+- unknown
+
+size:
+- large
+- medium
+- small
+- unknown
+
+condition:
+- new
+- used
+- deformed
+- unknown
+
